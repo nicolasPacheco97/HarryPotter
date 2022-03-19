@@ -1,0 +1,37 @@
+@import "../../../variables";
+
+.button{
+    background: $color-button;
+    min-width: 140px;
+    height: 43px;
+    border: 4px solid #6B63B5;
+    box-sizing: border-box;
+    border-radius: 2.56277px;
+    color: $title_color;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 20%;
+
+    &:hover{
+        background: $color-button-hover;
+    }
+
+    &.selected{
+        background: $color-button-press;
+    }
+
+    @include global_responsive($phone-size){
+        background: $color-button;
+        min-width: 288px;
+        height: 67px;
+        border: 4px solid #6B63B5;
+        box-sizing: border-box;
+        border-radius: 2.56277px;
+        color: $title_color;
+
+        font-size: 17px;
+        line-height: 25px;
+    }
+}

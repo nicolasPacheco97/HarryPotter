@@ -1,0 +1,90 @@
+@import "../../../variables";
+
+.card{
+    width: 140px;
+    height: 180px;
+    border-radius: 5px;
+    
+    display: flex;
+    flex-direction: column;
+
+    &__image{
+        height: 87px;
+        background: $gryffindor_color;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    &__info{
+        background-color: $title_color;
+        border-radius: 0px 0px 5px 5px;
+
+        & > p {
+            margin: 0px;
+            font-weight: 600;
+            line-height: 46px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        & > div {
+            padding: 10px;
+
+            & > p {
+                margin: 0px;
+                color: $text_secondary;
+                font-size: 11px;
+                line-height: 15px;
+            }
+        }  
+    }
+
+    @include global_responsive($phone-size){
+        flex-direction: row;
+        width: 515px;
+        height: 265px;
+        border-radius: 16px;
+
+        &__image{
+            height: 265px;
+            width: 210px;
+            background: $gryffindor_color-big;
+            border-radius: 16px 0px 0px 16px;
+        }
+
+        &__info{
+            background-color: $title_color;
+            border-radius: 0px 16px 16px 0px;
+            width: 305px;
+            padding: 20px;
+
+            & > span {
+                color: $text_secondary;
+                font-size: 14px;
+                line-height: 19px;
+            }
+    
+            & > p {
+                margin: 0px;
+                font-weight: 600;
+                line-height: 46px;
+                font-size: 30px;
+                text-align: left;
+                margin: 20px 0px;
+            }
+    
+            & > div {
+                padding: 0px;
+    
+                & > p {
+                    color: $body_text;
+                    font-size: 14px;
+                    line-height: 27px;
+
+                    & > span{
+                        font-weight: bold;
+                    }
+                }
+            }  
+        }
+    }
+}

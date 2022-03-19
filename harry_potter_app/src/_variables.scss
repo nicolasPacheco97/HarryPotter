@@ -1,0 +1,35 @@
+//Responsive: movile first
+@mixin global_responsive ($size){
+    @media only screen and (min-width: $size){
+        @content;
+    }
+}
+
+//color houses
+$gryffindor_color: linear-gradient(90deg, #FF0000 4.67%, #FED482 96.97%);
+$slytherin_color: linear-gradient(90deg, #1C792B 0%, #82E95E 100%);
+$hufflepuff_color: linear-gradient(90deg, #FFC700 0%, #FFF388 100%);
+$ravenclaw_color: linear-gradient(90deg, #0597B7 0%, #66D1FF 100%);
+
+$gryffindor_color-big: linear-gradient(135deg, #FF0000 4.67%, #FED482 96.97%);
+$slytherin_color-big: linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
+$hufflepuff_color-big: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
+$ravenclaw_color-big: linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
+
+
+//font
+$title_color: white;
+$text_secondary: #999999;
+$body_text: #374A59;
+
+//Button
+$color-button: rgba(0, 0, 0, 0.6);
+$color-button-hover: rgba(107, 99, 181, 0.6);
+$color-button-press: #6B63B5;
+
+//Screen sizes
+$phone-size: 640px;
+$tablet-size: 768px;
+$normal-size: 1024px;
+$large-size: 1280px;
+$Xlarge-size: 1536px;

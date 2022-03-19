@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.filter{
+    width: 90%;
+
+    &__title{
+        margin: 0px;
+        margin-bottom: 24px;
+        color: $title_color;
+        line-height: 25px;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @include global_responsive($phone-size){
+        &__title{
+            margin-bottom: 64px;
+            font-size: 36px;
+        }
+    }
+}

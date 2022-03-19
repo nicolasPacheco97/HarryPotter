@@ -1,0 +1,30 @@
+@import "../../variables";
+
+.layout{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url("../../assets/Background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &__title{
+        width: 124px;
+        max-height: 42px;
+        margin-top: 30px;
+        margin-bottom: 7px;
+
+        @include global_responsive($phone-size){
+            width: 194px;
+            max-height: 66px;
+            margin-top: 142px;
+            margin-bottom: 31px;
+        }
+    }
+}
