@@ -1,0 +1,59 @@
+@import "../../variables";
+
+.bar{
+    position: fixed;
+    bottom: 0;
+
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 49.5%;
+        background: #6B63B5;
+        box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+
+        text-align: center;
+        color: $title_color;
+        font-size: 14px;
+        line-height: 25px;
+
+        & > span{
+            padding-top: 5px;
+            padding-left: 3px;
+        }
+
+        &:first-child{
+            border-top-left-radius: 16px;
+        }
+
+        &:last-child{
+            border-top-right-radius: 16px;
+        }
+    }
+
+    @include global_responsive($phone-size){
+        width: 300px;
+
+        top: 0px;
+        right: 10%;
+
+        & > div {
+            &:first-child{
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 16px;
+            }
+    
+            &:last-child{
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 16px;
+            }
+        }
+    }
+}

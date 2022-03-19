@@ -19,6 +19,7 @@
     }
 
     @include global_responsive($phone-size){
+        max-width: 1000px;
         &__title{
             margin-bottom: 64px;
             font-size: 36px;

@@ -1,0 +1,46 @@
+@import "../../../variables";
+
+.modal{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999999;
+    overflow: hidden;
+
+    &-container {
+        position: absolute;
+        top: calc(50% - 100px);
+        right: calc(50% - 100px);
+        background-color: $title_color;
+        border-radius: 16px;
+
+
+        & .modal-header{
+            padding: 10px;
+            min-width: 400px;
+            font-size: 24px;
+
+
+
+            & > span{
+                float: right;
+                border: 1px solid $text_secondary;
+                border-radius: 100px;
+                padding: 5px 10px;
+
+                font-size: 18px;
+                font-weight: bold;
+                color: $text_secondary;
+            }
+        }
+
+        & .modal-footer{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+    }
+}
