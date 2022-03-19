@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.card-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+
+    & > li {
+        padding: 0px 10px 20px 10px;
+    }
+
+    @include global_responsive($phone-size){
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+
+        & > li {
+            padding: 0px 20px 50px 20px;
+        }
+    }
+}

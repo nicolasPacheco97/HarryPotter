@@ -1,8 +1,10 @@
 @import "../../../variables";
 
 .card{
-    width: 140px;
-    height: 180px;
+    min-width: 140px;
+    max-width: 140px;
+    max-height: 180px;
+    min-height: 180px;
     border-radius: 5px;
     
     display: flex;
@@ -10,18 +12,36 @@
 
     &__image{
         height: 87px;
-        background: $gryffindor_color;
         border-radius: 5px 5px 0px 0px;
+        background: $text_secondary;
+
+        &.Gryffindor{
+            background: $gryffindor_color;
+        }
+        &.Slytherin{
+            background: $slytherin_color;
+        }
+        &.Hufflepuff{
+            background: $hufflepuff_color;
+        }
+        &.Ravenclaw{
+            background: $ravenclaw_color;
+        }
     }
 
+
     &__info{
+        height: 93px;
         background-color: $title_color;
         border-radius: 0px 0px 5px 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         & > p {
             margin: 0px;
             font-weight: 600;
-            line-height: 46px;
             font-size: 18px;
             text-align: center;
         }
@@ -40,8 +60,8 @@
 
     @include global_responsive($phone-size){
         flex-direction: row;
-        width: 515px;
-        height: 265px;
+        min-width: 515px;
+        min-height: 265px;
         border-radius: 16px;
 
         &__image{
@@ -52,6 +72,7 @@
         }
 
         &__info{
+            min-height: 225px;
             background-color: $title_color;
             border-radius: 0px 16px 16px 0px;
             width: 305px;
