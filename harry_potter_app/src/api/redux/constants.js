@@ -1,3 +1,5 @@
 export const constants = {
-    "GET_CHARACTERS": "GET_CHARACTERS"
+    "GET_CHARACTERS": "GET_CHARACTERS",
+    "FAVORITOS": "FAVORITOS",
+    "ADD_CHARACTER": "ADD_CHARACTER"
 }

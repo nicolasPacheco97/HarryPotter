@@ -11,19 +11,17 @@
     overflow: hidden;
 
     &-container {
+        max-width: 750px;
         position: absolute;
         top: calc(50% - 100px);
-        right: calc(50% - 100px);
+        right: calc(50% - 400px);
         background-color: $title_color;
         border-radius: 16px;
-
 
         & .modal-header{
             padding: 10px;
             min-width: 400px;
             font-size: 24px;
-
-
 
             & > span{
                 float: right;
@@ -41,6 +39,51 @@
             display: flex;
             justify-content: center;
             padding: 10px;
+        }
+
+        & .modal-body{
+            max-height: 50vh;
+            overflow-y: auto;
+        }
+    }
+
+    @include global_responsive($phone-size){
+        &-container {
+            max-width: 750px;
+            position: absolute;
+            top: calc(50% - 312px);
+            right: calc(50% - 400px);
+            background-color: $title_color;
+            border-radius: 16px;
+    
+            & .modal-header{
+                padding: 10px;
+                min-width: 400px;
+                font-size: 24px;
+    
+                & > span{
+                    float: right;
+                    border: 1px solid $text_secondary;
+                    border-radius: 100px;
+                    padding: 5px 10px;
+                    cursor: pointer;
+    
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $text_secondary;
+                }
+            }
+    
+            & .modal-footer{
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+            }
+    
+            & .modal-body{
+                max-height: 50vh;
+                overflow-y: auto;
+            }
         }
     }
 }

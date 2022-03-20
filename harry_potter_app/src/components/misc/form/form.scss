@@ -1,0 +1,55 @@
+@import "../../../variables";
+
+.form{
+    padding: 20px;
+    
+    & > div{
+        display: flex;
+        flex-wrap: wrap;
+        & > span {
+            width: 310px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+    }
+}
+
+.form-text{
+    & > input{
+        background-color:rgba(#263238, 0.06);
+        outline: none;
+        border: none;
+        border-bottom: 1.5px solid rgba(#263238, 0.06);
+        font-size: 20px;
+        height: 75px;
+
+    }
+}
+
+.form-radio{
+    display: flex;
+    justify-content: space-around;
+
+    & > span {
+        display: flex;
+        align-items: center;
+
+        & > label{
+            padding-top: 5px;
+            font-size: 16px;
+            margin-right: 30px;
+        }
+
+        & > input[type=radio] {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.button-submit{
+    display: flex;
+    justify-content:center;
+}

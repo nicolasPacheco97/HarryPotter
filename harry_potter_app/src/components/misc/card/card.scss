@@ -6,14 +6,36 @@
     max-height: 180px;
     min-height: 180px;
     border-radius: 5px;
+    position: relative;
     
     display: flex;
     flex-direction: column;
+
+    &__saved{
+        width: 20px;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        cursor: pointer;
+    }
 
     &__image{
         height: 87px;
         border-radius: 5px 5px 0px 0px;
         background: $text_secondary;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+            max-width: 70px;
+            max-height: 70px;
+            min-width: 70px;
+            min-height: 70px;
+            border-radius: 300px;
+            object-fit: cover;
+        }
 
         &.Gryffindor{
             background: $gryffindor_color;
@@ -27,17 +49,22 @@
         &.Ravenclaw{
             background: $ravenclaw_color;
         }
+
     }
-
-
+    
+    
     &__info{
         height: 93px;
         background-color: $title_color;
         border-radius: 0px 0px 5px 5px;
-
+        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        &.dead{
+            background-color: $dead-color;
+        }
 
         & > p {
             margin: 0px;
@@ -64,11 +91,26 @@
         min-height: 265px;
         border-radius: 16px;
 
+        &__saved{
+            width: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
         &__image{
             height: 265px;
             width: 210px;
             background: $gryffindor_color-big;
             border-radius: 16px 0px 0px 16px;
+
+            & > img {
+                max-width: 150px;
+                max-height: 150px;
+                min-width: 150px;
+                min-height: 150px;
+                border-radius: 300px;
+                object-fit: cover;            }
         }
 
         &__info{

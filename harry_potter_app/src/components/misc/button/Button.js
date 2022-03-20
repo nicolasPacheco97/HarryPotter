@@ -1,8 +1,8 @@
 import "./button.scss";
 
-const Button = ({label, handleClick, isSelected}) => {
+const Button = ({label, handleClick, actualOpt, type}) => {
     return (
-        <button id={label} onClick={handleClick} className={`button ${isSelected ? "selected" : ""}`}>
+        <button type={type} id={label} onClick={handleClick} className={`button ${label === actualOpt ? "selected" : ""}`}>
             {label}
         </button>
     )

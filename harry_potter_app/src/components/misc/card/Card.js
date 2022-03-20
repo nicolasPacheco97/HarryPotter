@@ -1,18 +1,32 @@
-import { useEffect } from "react"
 import { useWidth } from "../../../helpers/useWidth"
 import "./card.scss"
+import save from "../../../assets/saved.svg"
+import saved from "../../../assets/save.svg"
+import { useDispatch, useSelector } from "react-redux"
+import { action } from "../../../api/redux/action"
 
 const Card = ({character}) => {
+    const dispatch = useDispatch()
+    const { favoritos } = useSelector(e => e.characters)
     const width = useWidth()
     const isAlive = character.alive ? "VIVO" : "FINADO"
     const isStaff = character.hogwartsStaff ? "STAFF" : "ESTUDIANTE"
-    useEffect(() => { console.log(character) },[character])
+
+    const handleClick = (e) => {
+        console.log([...favoritos, e])
+        if(favoritos.length < 5){
+            dispatch(action.favoritos([...favoritos, e]))
+        }
+    }
 
     return (
         <>
             <div className="card">
-                <div className={`card__image ${character.house}`}></div>
-                <div className="card__info">
+                <img src={!!favoritos.find(e => e.name === character.name) ? saved : save} className="card__saved" onClick={() => handleClick(character)}></img>
+                <div className={`card__image ${character.house}`}>
+                    <img src={character.image}/>
+                </div>
+                <div className={`card__info ${!character.alive && "dead"}`}>
                     {width > 640 && <span> {isAlive} / {isStaff} </span>}
                     <p>{character.name}</p>
                     {width < 640 && <div>

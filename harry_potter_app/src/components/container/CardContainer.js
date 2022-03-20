@@ -5,7 +5,7 @@ const CardContainer = ({characters}) => {
     return (
         <>
             <div className="card-container">
-                {characters.map((e, i) => (
+                {characters.length > 0 && characters.map((e, i) => (
                     <li key={i}>
                         <Card character={e}/>
                     </li>

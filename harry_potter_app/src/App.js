@@ -8,8 +8,14 @@ import Layout from "./components/layout/Layout";
 function App() {
   const dispatch = useDispatch()
   const { characters } = useSelector(e => e.characters)
-
   const [actualCharacters, setActualCharacters] = useState([])
+  const [actualOpt, setActualOpt] = useState("")
+
+  const target = {
+    "ESTUDIANTES" : () => setActualCharacters(characters.filter( e => e.hogwartsStudent)),
+    "STAFF": () => setActualCharacters(characters.filter( e => e.hogwartsStaff)),
+    "ALL": () => setActualCharacters(characters),
+  }
 
   useEffect(() => {
     dispatch(action.getCharacters())
@@ -17,14 +23,24 @@ function App() {
 
   useEffect(() => {
     if(characters){
-      setActualCharacters(characters)
+      target["ALL"]()
     }
   },[characters])
+
+  const handleClick = (e) => {
+    if(e.target.id !== actualOpt){
+      target[e.target.id]();
+      setActualOpt(e.target.id)
+    }else {
+      target["ALL"]()
+      setActualOpt(null)
+    }
+  }
 
   return (
     <div className="App">
       <Layout>
-        <Filter/>
+        <Filter handleClick={handleClick} actualOpt={actualOpt}/>
         <CardContainer characters={actualCharacters}/>
       </Layout>
     </div>

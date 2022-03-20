@@ -2,7 +2,9 @@ import { combineReducers } from "redux"
 import { constants } from "./constants"
 
 const initState = {
-    characters: null
+    characters: null,
+    favoritos: [],
+    isAdded: false
 }
 
 const rootReducer = combineReducers({
@@ -17,7 +19,16 @@ function characters( state = initState, action = {} ) {
                 ...state,
                 characters: action.payload
             }
-        
+        case constants.FAVORITOS:
+            return {
+                ...state,
+                favoritos: action.payload
+            }
+        case constants.ADD_CHARACTER:
+            return {
+                ...state,
+                isAdded: action.payload
+            }
         default: return state
     }
 }
