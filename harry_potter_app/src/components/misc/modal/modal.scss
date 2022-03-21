@@ -12,9 +12,10 @@
 
     &-container {
         max-width: 750px;
+        width: 350px;
         position: absolute;
-        top: calc(50% - 100px);
-        right: calc(50% - 400px);
+        top: calc(50% - 160px);
+        right: calc(50% - 180px);
         background-color: $title_color;
         border-radius: 16px;
 
@@ -24,7 +25,7 @@
             font-size: 24px;
 
             & > span{
-                float: right;
+                margin-left: 70px;
                 border: 1px solid $text_secondary;
                 border-radius: 100px;
                 padding: 5px 10px;
@@ -50,6 +51,7 @@
     @include global_responsive($phone-size){
         &-container {
             max-width: 750px;
+            width: 750px;
             position: absolute;
             top: calc(50% - 312px);
             right: calc(50% - 400px);
@@ -62,6 +64,7 @@
                 font-size: 24px;
     
                 & > span{
+                    margin-left: 0px;
                     float: right;
                     border: 1px solid $text_secondary;
                     border-radius: 100px;
