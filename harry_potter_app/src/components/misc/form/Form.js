@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm, Controller } from "react-hook-form"
 import { useDispatch } from "react-redux";
 import { action } from "../../../api/redux/action";
@@ -10,31 +11,32 @@ const Form = () => {
         "CUMPLEAÑOS" :"",
         "COLOR DE OJOS": "",
         "COLOR DE PELO": "",
-        "GÉNERO": "Mujer",
-        "POSICIÓN": "Estudiante"
+        "GENERO": "",
+        "POSICION": ""
     }
     const { control, handleSubmit } = useForm({defaultValues});
     const dispatch = useDispatch()
+    const [myData, setMyData] = useState({})
 
     const values = [
         {field: "NOMBRE", type: "text", opt: []},
         {field: "CUMPLEAÑOS", type: "text", opt: []},
         {field: "COLOR DE OJOS", type: "text", opt: []},
         {field: "COLOR DE PELO", type: "text", opt: []},
-        {field: "GÉNERO", type: "radio", opt: ["Mujer", "Hombre"]},
-        {field: "POSICIÓN", type: "radio", opt: ["Estudiante", "Staff"]},
+        {field: "GENERO", type: "radio", opt: ["Mujer", "Hombre"]},
+        {field: "POSICION", type: "radio", opt: ["Estudiante", "Staff"]},
     ]
 
     const onSubmit = (e) => {
-        console.log(e)
+        console.log(myData)
         let data = {
             "name": e["NOMBRE"],
-            "gender": e["GÉNERO"],
+            "gender": myData["GENERO"] === "Hombre" ? "male" : "female",
             "dateOfBirth": e["CUMPLEAÑOS"],
             "eyeColour": e["COLOR DE OJOS"],
             "hairColour": e["COLOR DE PELO"],
-            "hogwartsStudent": e["POSICIÓN"] === "Estudiante",
-            "hogwartsStaff": e["POSCIÓN"] === "Staff",
+            "hogwartsStudent": myData["POSICION"] === "Estudiante",
+            "hogwartsStaff": myData["POSICION"] === "Staff",
             "image": e["FOTOGRAFIA"],
         }
 
@@ -60,6 +62,7 @@ const Form = () => {
                                                 value={e.opt[0]}
                                                 id={e.field}
                                                 name={field.name}
+                                                onChange={element => setMyData({...myData, [e.field]: element.target.value})}
                                                 />
                                                 <label htmlFor={e.opt[0]}>{e.opt[0]}</label>
                                                 <input
@@ -67,6 +70,7 @@ const Form = () => {
                                                 value={e.opt[1]}
                                                 id={e.field}
                                                 name={field.name}
+                                                onChange={element => setMyData({...myData, [e.field]: element.target.value})}
                                                 />
                                                 <label htmlFor={e.opt[1]}>{e.opt[1]}</label>
                                             </span>
