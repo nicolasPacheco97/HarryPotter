@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/nicolasPacheco-hp.github.io/static/css/main.c0ca7626.css",
-    "main.js": "/nicolasPacheco-hp.github.io/static/js/main.657fa8b5.js",
-    "static/js/787.084f4893.chunk.js": "/nicolasPacheco-hp.github.io/static/js/787.084f4893.chunk.js",
-    "static/media/Background.svg": "/nicolasPacheco-hp.github.io/static/media/Background.06ee934675f010571ff5.svg",
-    "static/media/title.svg": "/nicolasPacheco-hp.github.io/static/media/title.8f12e92cee0a688e96003e2bbfa24e49.svg",
-    "static/media/Trash.svg": "/nicolasPacheco-hp.github.io/static/media/Trash.db2c6ed9a51a929112e37f37e314feee.svg",
-    "index.html": "/nicolasPacheco-hp.github.io/index.html",
-    "static/media/add.svg": "/nicolasPacheco-hp.github.io/static/media/add.ead9fb66cf9b2dd24bbea894d5fe8142.svg",
-    "static/media/save.svg": "/nicolasPacheco-hp.github.io/static/media/save.0d79d13f3e871ea9e6f95b437234d05e.svg",
-    "static/media/saved.svg": "/nicolasPacheco-hp.github.io/static/media/saved.9f285ce6b5db97e6de1d81d530cd72fe.svg",
-    "main.c0ca7626.css.map": "/nicolasPacheco-hp.github.io/static/css/main.c0ca7626.css.map",
-    "main.657fa8b5.js.map": "/nicolasPacheco-hp.github.io/static/js/main.657fa8b5.js.map",
-    "787.084f4893.chunk.js.map": "/nicolasPacheco-hp.github.io/static/js/787.084f4893.chunk.js.map"
+    "main.css": "/hp/static/css/main.ec2fc5c9.css",
+    "main.js": "/hp/static/js/main.a4b9efb4.js",
+    "static/js/787.084f4893.chunk.js": "/hp/static/js/787.084f4893.chunk.js",
+    "static/media/Background.svg": "/hp/static/media/Background.06ee934675f010571ff5.svg",
+    "static/media/title.svg": "/hp/static/media/title.8f12e92cee0a688e96003e2bbfa24e49.svg",
+    "static/media/Trash.svg": "/hp/static/media/Trash.db2c6ed9a51a929112e37f37e314feee.svg",
+    "static/media/add.svg": "/hp/static/media/add.ead9fb66cf9b2dd24bbea894d5fe8142.svg",
+    "index.html": "/hp/index.html",
+    "static/media/save.svg": "/hp/static/media/save.0d79d13f3e871ea9e6f95b437234d05e.svg",
+    "static/media/saved.svg": "/hp/static/media/saved.9f285ce6b5db97e6de1d81d530cd72fe.svg",
+    "main.ec2fc5c9.css.map": "/hp/static/css/main.ec2fc5c9.css.map",
+    "main.a4b9efb4.js.map": "/hp/static/js/main.a4b9efb4.js.map",
+    "787.084f4893.chunk.js.map": "/hp/static/js/787.084f4893.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0ca7626.css",
-    "static/js/main.657fa8b5.js"
+    "static/css/main.ec2fc5c9.css",
+    "static/js/main.a4b9efb4.js"
   ]
 }
